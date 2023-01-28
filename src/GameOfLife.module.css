@@ -1,0 +1,112 @@
+.universe {
+  width: 100%;
+  display: grid;
+}
+
+.cell {
+  width: 100%;
+  height: 25px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.17);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.4px);
+  -webkit-backdrop-filter: blur(1.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.graphic {
+  width: 125%;
+  max-width: 625px;
+  max-height: 625px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  position: relative;
+
+  border-radius: 16px;
+  background: linear-gradient(145deg, #272a32, #2e323c);
+  box-shadow: 30px 30px 74px #17191e, -30px -30px 74px #3f4552;
+}
+
+.buttonsSection {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonsSection button {
+  border: none;
+  cursor: pointer;
+  background-color: #7fffd4;
+
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 40px;
+
+  border-radius: 29px;
+  background: linear-gradient(145deg, #24282f, #2b2f38);
+  box-shadow: 31px 31px 60px #1f2229, -31px -31px 60px #31363f;
+  color: whitesmoke;
+}
+
+.buttonsSection button:hover {
+  background: linear-gradient(145deg, #72e6bf, #88ffe3);
+  color: #2e323c;
+}
+
+.image {
+  background-image: url("./dua.jpeg");
+  background-size: cover;
+}
+
+.glass-effect {
+}
+
+.cell:hover {
+  background: #fcfcfc;
+  z-index: 14;
+  cursor: pointer;
+  box-shadow: inset 0 4px 20px #7fffd4;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.textSideContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.textSideContainer h1 {
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+.textSideContainer p {
+  margin: 0;
+  text-align: left;
+}
