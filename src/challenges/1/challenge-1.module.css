@@ -7,8 +7,8 @@
 .header {
   display: flex;
   justify-content: center;
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-top: 20px;
   background-color: #2e323c;
 }
@@ -26,18 +26,20 @@
 }
 
 .listContainer {
-  height: 16 rem;
-  margin-left: 15em;
-  margin-right: 15em;
+  height: 40%;
+  margin-left: 10%;
+  margin-right: 10%;
   overflow-x: scroll;
   background-color: white;
   display: flex;
   flex-wrap: nowrap;
 }
 
-.listContainer > h1:first-child {
-  color: white;
+.listContainer h1 {
+  color: black;
   justify-self: baseline;
+  background-color: white;
+  font-size: medium;
 }
 
 .listContainer img {
