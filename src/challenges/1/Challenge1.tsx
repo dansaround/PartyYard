@@ -79,10 +79,10 @@ export const Challenge1 = () => {
     setShowAll(!showAll);
   };
 
-  const arr = marketCard.map((card, id) => {
+  const arr = marketCard.map((card, index) => {
     return (
       <div key={card.id}>
-        {showAll || id < 3 ? (
+        {showAll || index < 3 ? (
           <div className={"cardd"} key={card.id}>
             <img src={card.image}></img>
             <h1>{card.name}</h1>
