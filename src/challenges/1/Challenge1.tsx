@@ -1,4 +1,5 @@
 import styled from "./challenge-1.module.css";
+import { useState } from "react";
 
 /* ========== Crear un render de una lista de artículos de supermercado con el array `marketCard` 😬🛒 ======== /
 /   1. La lista debe ser scrooleable horizontalmente                                                           /
@@ -72,7 +73,37 @@ const marketCard: { id: number; name: string; image: string }[] = [
 ];
 
 export const Challenge1 = () => {
-  return <div className={styled.mainContainer}>{/* Your code here */}</div>;
-};
+  const [showAll, setShowAll] = useState(false);
 
+  const handleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
+  const arr = marketCard.map((card, id) => {
+    return (
+      <div key={card.id}>
+        {showAll || id < 3 ? (
+          <div className={"cardd"} key={card.id}>
+            <img src={card.image}></img>
+            <h1>{card.name}</h1>
+          </div>
+        ) : null}
+      </div>
+    );
+  });
+
+  return (
+    <div className={styled.mainContainer}>
+      <header className={styled.header}>
+        <h1>Every day amenities</h1>
+        <p>{marketCard.length} artículos</p>
+      </header>
+      <div className={styled.listContainer}>{arr}</div>
+
+      <button className={styled.button} onClick={handleShowAll}>
+        {showAll ? "Ya no, gracias boludo" : "Pero mostráme todos che"}
+      </button>
+    </div>
+  );
+};
 // Importar este componente en App.tsx.

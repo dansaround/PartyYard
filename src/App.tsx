@@ -1,16 +1,10 @@
 import "./App.css";
-import { GameOfLife } from "./GameOfLife";
-import { TextSide } from "./TextSide";
+import { Challenge1 } from "./challenges/1/Challenge1";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="layout">
-          <TextSide />
-          <GameOfLife />
-        </div>
-      </header>
+      <Challenge1 />
     </div>
   );
 }
