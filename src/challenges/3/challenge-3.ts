@@ -123,8 +123,8 @@ const sumAll = (array: number[]) => {
   let total: number = 0;
   array.forEach((num) => {
     total += num;
-    return total;
   });
+  return total;
 };
 
 const result9 = sumAll([1, 2, 3, 4, 5]);
@@ -141,7 +141,7 @@ console.log("Resultado 9: ", result9);
 const soloLosPrimeros = (x: number, y: number[]) => y.splice(0, x);
 
 const result10 = soloLosPrimeros(3, [5, 3, 4, 1, 2]);
-console.log("input 10: [5, 3, 4, 1, 2]");
+console.log("input 10: 3 [5, 3, 4, 1, 2]");
 console.log("Resultado 10: ", result10);
 
 //==============================================================================
@@ -152,8 +152,10 @@ console.log("Resultado 10: ", result10);
 
 // CODE HERE
 export const multiplicaPares = (n: number, numeros: number[]): number[] => {
-  return numeros.filter((num) => num % 2 === 0).map((num) => num * n);
+  let result: number[] = numeros.map((num) => (num % 2 === 0 ? num * n : num));
+  return result;
 };
+
 const result11 = multiplicaPares(2, [5, 6, 3, 2, 9]);
 console.log("input 11: [5, 6, 3, 2, 9]");
 console.log("Resultado 11: ", result11);
@@ -168,5 +170,28 @@ console.log("Resultado 11: ", result11);
 // Ej: in: 'piedra'; out: 'computadora: papel, ganador: computadora'
 
 // CODE HERE
+
+export const piedraPapelTijera = (jugadorPicks: string) => {
+  const opciones = ["piedra", "papel", "tijera"];
+  const random = opciones[Math.floor(Math.random() * opciones.length)];
+
+  if (random === "piedra" && jugadorPicks === "tijera") {
+    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+  }
+  if (random === "tijera" && jugadorPicks === "papel") {
+    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+  }
+  if (random === "papel" && jugadorPicks === "piedra") {
+    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+  }
+  if (random === jugadorPicks) {
+    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+  }
+  return "Player wins, input player: ${jugadorPicks}, computer pick: ${random}";
+};
+
+const result12 = piedraPapelTijera("piedra");
+console.log("piedra");
+console.log("input player: piedra", "computer pick: ${random}");
 
 //==============================================================================
