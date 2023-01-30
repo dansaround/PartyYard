@@ -176,18 +176,18 @@ export const piedraPapelTijera = (jugadorPicks: string) => {
   const random = opciones[Math.floor(Math.random() * opciones.length)];
 
   if (random === "piedra" && jugadorPicks === "tijera") {
-    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+    return `Computador wins, input player: ${jugadorPicks}, computer pick: ${random}`;
   }
   if (random === "tijera" && jugadorPicks === "papel") {
-    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+    return `Computador wins, input player: ${jugadorPicks}, computer pick: ${random}`;
   }
   if (random === "papel" && jugadorPicks === "piedra") {
-    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+    return `Computador wins, input player: ${jugadorPicks}, computer pick: ${random}`;
   }
   if (random === jugadorPicks) {
-    return "Computador wins, input player: ${jugadorPicks}, computer pick: ${random}";
+    return `Computador wins, input player: ${jugadorPicks}, computer pick: ${random}`;
   }
-  return "Player wins, input player: ${jugadorPicks}, computer pick: ${random}";
+  return `Player wins, input player: ${jugadorPicks}, computer pick: ${random}`;
 };
 
 const result12 = piedraPapelTijera("piedra");
