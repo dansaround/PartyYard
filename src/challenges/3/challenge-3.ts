@@ -4,6 +4,7 @@
 // CODE HERE
 export const sumThese = (x: number, y: number) => x + y;
 const result1 = sumThese(10, 5);
+console.log("input 1: 10, 5");
 console.log("Resultado 1: ", result1);
 
 //==============================================================================
@@ -15,6 +16,7 @@ console.log("Resultado 1: ", result1);
 
 export const substractThese = (x: number, y: number) => x - y;
 const result2 = substractThese(9, 5);
+console.log("input 2: 9, 5");
 console.log("Resultado 2: ", result2);
 
 //==============================================================================
@@ -25,6 +27,7 @@ console.log("Resultado 2: ", result2);
 // CODE HERE
 export const multiplyThese = (x: number, y: number) => x * y;
 const result3 = multiplyThese(5, 4);
+console.log("input 3: 5, 4");
 console.log("Resultado 3: ", result3);
 //==============================================================================
 
@@ -34,6 +37,7 @@ console.log("Resultado 3: ", result3);
 // CODE HERE
 export const parImpar = (x: number) => (x % 2 === 0 && "Par") || "Impar";
 const result4 = parImpar(83);
+console.log("input 4: 85");
 console.log("Resultado 4: ", result4);
 
 //==============================================================================
@@ -53,6 +57,7 @@ const esPrimo = (numero: number) => {
 };
 
 const result5 = esPrimo(7);
+console.log("input 5: 7");
 console.log("Resultado 5: ", result5);
 
 //==============================================================================
@@ -60,6 +65,18 @@ console.log("Resultado 5: ", result5);
 // 6. Hacer una función que reciba un número, un array, y multipique cada
 // elemento del array por el número
 // Ej: in: 2, [1, 2, 3]; out: [2, 4, 6]
+
+const multiplicameEste = (x: number, y: number[]) => {
+  let results: number[] = [];
+  y.forEach((num) => {
+    results.push(x * num);
+  });
+  return results;
+};
+
+const result6 = multiplicameEste(2, [3, 4, 5]);
+console.log("input 6: 2, [3, 4, 5] ");
+console.log("Resultado 6: ", result6);
 
 // CODE HERE
 
@@ -70,6 +87,13 @@ console.log("Resultado 5: ", result5);
 // Ej: in: [5, 3, 4, 1, 2]; out: [5, 4, 3, 2, 1]
 
 // CODE HERE
+const ordenDescendiente = (numeros: number[]): number[] => {
+  return numeros.sort((a, b) => b - a);
+};
+
+const result7 = ordenDescendiente([2, 5, 7, 3, 84, 54, 23, 12]);
+console.log("input 6: [2, 5, 7, 3, 84, 54, 23, 12] ");
+console.log("Resultado 7: ", result7);
 
 //==============================================================================
 
@@ -79,6 +103,15 @@ console.log("Resultado 5: ", result5);
 // Ej: in: [1, 2, 3, 4, 5]; out: 'No hay números mayores a 5'
 
 // CODE HERE
+const mayorQueCinco = (numeros: number[]): number[] | string => {
+  let results: number[] = numeros.filter((num) => num > 5);
+
+  return results.length > 0 ? results : "No hay números mayores a 5";
+};
+
+const result8 = mayorQueCinco([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+console.log("input 8: [1, 2, 3, 4, 5, 6, 7, 8, 9]");
+console.log("Resultado 8: ", result8);
 
 //==============================================================================
 
@@ -86,6 +119,17 @@ console.log("Resultado 5: ", result5);
 // Ej: in: [1, 2, 3, 4, 5]; out: 15
 
 // CODE HERE
+const sumAll = (array: number[]) => {
+  let total: number = 0;
+  array.forEach((num) => {
+    total += num;
+    return total;
+  });
+};
+
+const result9 = sumAll([1, 2, 3, 4, 5]);
+console.log("input 9: [1, 2, 3, 4, 5]");
+console.log("Resultado 9: ", result9);
 
 //==============================================================================
 
@@ -94,6 +138,11 @@ console.log("Resultado 5: ", result5);
 // Ej: in: 3, [1, 2, 3, 4, 5]; out: [1, 2, 3]
 
 // CODE HERE
+const soloLosPrimeros = (x: number, y: number[]) => y.splice(0, x);
+
+const result10 = soloLosPrimeros(3, [5, 3, 4, 1, 2]);
+console.log("input 10: [5, 3, 4, 1, 2]");
+console.log("Resultado 10: ", result10);
 
 //==============================================================================
 
