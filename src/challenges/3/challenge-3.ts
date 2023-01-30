@@ -2,6 +2,9 @@
 // Ej: in: 1, 2; out: 3
 
 // CODE HERE
+export const sumThese = (x: number, y: number) => x + y;
+const result1 = sumThese(10, 5);
+console.log("Resultado 1: ", result1);
 
 //==============================================================================
 
@@ -10,19 +13,28 @@
 
 // CODE HERE
 
+export const substractThese = (x: number, y: number) => x - y;
+const result2 = substractThese(9, 5);
+console.log("Resultado 2: ", result2);
+
 //==============================================================================
 
 // 3. Hacer una función capaz de multiplicar 2 números =========================
 // Ej: in: 4, 4; out: 16
 
 // CODE HERE
-
+export const multiplyThese = (x: number, y: number) => x * y;
+const result3 = multiplyThese(5, 4);
+console.log("Resultado 3: ", result3);
 //==============================================================================
 
 // 4. Hacer una función capaz de saber si un número es par o impar =============
 // Ej: in: 4; out: 'par'
 
 // CODE HERE
+export const parImpar = (x: number) => (x % 2 === 0 && "Par") || "Impar";
+const result4 = parImpar(83);
+console.log("Resultado 4: ", result4);
 
 //==============================================================================
 
@@ -30,6 +42,18 @@
 // Ej: in: 4; out: 'no es primo'
 
 // CODE HERE
+const esPrimo = (numero: number) => {
+  // Casos especiales
+  if (numero == 0 || numero == 1 || numero == 4) return false;
+  for (let x = 2; x < numero / 2; x++) {
+    if (numero % x == 0) return false;
+  }
+  // Si no se pudo dividir por ninguno de los de arriba, sí es primo
+  return true;
+};
+
+const result5 = esPrimo(7);
+console.log("Resultado 5: ", result5);
 
 //==============================================================================
 

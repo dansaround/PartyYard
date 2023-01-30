@@ -1,5 +1,5 @@
 import "./App.css";
-import { Challenge2 } from "./challenges/2/Challenge2";
+import { challenge-3 } from "./challenges/3/challenge-3";
 
 function App() {
   return (
