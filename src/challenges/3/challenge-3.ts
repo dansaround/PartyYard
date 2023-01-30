@@ -151,6 +151,12 @@ console.log("Resultado 10: ", result10);
 // Ej: in: 3, [1, 2, 3, 4, 5]; out: [1, 4, 3, 8, 5]
 
 // CODE HERE
+export const multiplicaPares = (n: number, numeros: number[]): number[] => {
+  return numeros.filter((num) => num % 2 === 0).map((num) => num * n);
+};
+const result11 = multiplicaPares(2, [5, 6, 3, 2, 9]);
+console.log("input 11: [5, 6, 3, 2, 9]");
+console.log("Resultado 11: ", result11);
 
 //==============================================================================
 
