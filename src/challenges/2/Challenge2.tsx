@@ -117,7 +117,6 @@ export const Challenge2 = () => {
   const [filterList, setFilterList] = useState(users);
 
   const arr = filterList.map((user) => {
-    console.log(user);
     return (
       <div key={user.id}>
         <h2>{user.name}</h2>
@@ -130,47 +129,54 @@ export const Challenge2 = () => {
     );
   });
 
-  const isofAge = (e: any) => {
-    const LosMayoresDeEdad = users.filter((user) => {
-      return user.age > 17;
-    });
-    setFilterList(LosMayoresDeEdad);
-  };
+  const applyFilter = (
+    checked: boolean,
+    option: "age" | "man" | "woman" | "email" | "no-binary"
+  ) => {
+    if (!checked) {
+      setFilterList(users);
+      return;
+    }
 
-  const isMan = (e: any) => {
-    const LosMens = users.filter((user) => {
-      return user.gender === "male";
+    const newFilterApplied = users.filter((user) => {
+      if (option === "age") return user.age > 17;
+      if (option === "man") return user.gender === "male";
+      if (option === "woman") return user.gender === "female";
+      if (option === "email") return user.email.includes("gmail");
+      if (option === "no-binary") return user.gender === "no-binary";
     });
-    setFilterList(LosMens);
-  };
 
-  const isWoman = (e: any) => {
-    const LasFeminas = users.filter((user) => {
-      return user.gender === "female";
-    });
-    setFilterList(LasFeminas);
-  };
-  const isGmail = (e: any) => {
-    const ConGmail = users.filter((user) => {
-      return user.email.includes("gmail");
-    });
-    setFilterList(ConGmail);
-  };
-  const isNonBinary = (e: any) => {
-    const Ellxs = users.filter((user) => {
-      return user.gender === "no-binary";
-    });
-    setFilterList(Ellxs);
+    setFilterList(newFilterApplied);
   };
 
   return (
     <div>
       <h1>Taken</h1>
-      <input onChange={isofAge} type="checkbox" /> Mayor de Edad
-      <input onChange={isMan} type="checkbox" /> Hombre
-      <input onChange={isWoman} type="checkbox" /> Mujer
-      <input onChange={isGmail} type="checkbox" /> Solo Gmail
-      <input onChange={isNonBinary} type="checkbox" /> No Binario
+      <input
+        onChange={(e) => applyFilter(e.target.checked, "age")}
+        type="checkbox"
+      />{" "}
+      Mayor de Edad
+      <input
+        onChange={(e) => applyFilter(e.target.checked, "man")}
+        type="checkbox"
+      />{" "}
+      Hombre
+      <input
+        onChange={(e) => applyFilter(e.target.checked, "woman")}
+        type="checkbox"
+      />{" "}
+      Mujer
+      <input
+        onChange={(e) => applyFilter(e.target.checked, "email")}
+        type="checkbox"
+      />{" "}
+      Solo Gmail
+      <input
+        onChange={(e) => applyFilter(e.target.checked, "no-binary")}
+        type="checkbox"
+      />{" "}
+      No Binario
       <p>Actualmente {arr.length} personas cumplen con tu filtro</p>
       <div>{arr}</div>
     </div>
