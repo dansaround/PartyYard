@@ -194,8 +194,6 @@ export const piedraPapelTijera = (jugadorPicks: string) => {
 
 const result12 = piedraPapelTijera("piedra");
 console.log("piedra");
-console.log(
-  `Resultado 12: input player: piedra", "computer pick: ${random}, resultado: ${result12}`
-);
+console.log(`Resultado 12: input player: piedra", resultado: ${result12}`);
 
 //==============================================================================
