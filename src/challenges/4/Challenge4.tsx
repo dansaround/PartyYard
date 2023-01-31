@@ -34,7 +34,7 @@ export const Challenge4 = () => {
     }
   };
 
-  const result = drawTriangle(7, 9);
+  const result = drawTriangle(7, 8);
   console.log(drawTriangle(5, 5));
 
   console.log(triangleArea(5, 5));

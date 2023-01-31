@@ -1,0 +1,135 @@
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #2e323c;
+  overflow-y: scroll;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 20px;
+  background-color: #2e323c;
+}
+
+.header > h1:first-child {
+  text-align: left;
+  color: #74ae75;
+}
+
+.header > p {
+  text-align: left;
+  margin-top: 2em;
+  margin-left: 1em;
+  color: #74ae75;
+}
+
+.mainContainer hr {
+  margin: 2rem;
+}
+
+.listContainer {
+  height: 40rem;
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background-color: #474d5d;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listContainer::-webkit-scrollbar {
+  width: 0.4em;
+  background-color: #f5f5f5;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+  background-color: #d5b9b2;
+}
+
+.listContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #a26769;
+}
+
+.listContainer h1 {
+  color: rgb(4, 27, 7);
+  justify-self: baseline;
+  background-color: #a5fba7;
+  font-size: larger;
+}
+
+.listContainer img {
+  width: 10em;
+  height: 10em;
+}
+
+.listContainer span {
+  background-color: #a5fba7;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.listContainer aside {
+  display: flex;
+  justify-content: space-around;
+}
+
+.listCard {
+  margin: 1em;
+  border: 1px solid #74ae75;
+  border-radius: 4px;
+  width: 20em;
+  background-color: white;
+}
+
+.cart {
+  text-align: center;
+  color: #74ae75;
+}
+
+.buttonMore {
+  background-color: #a5fba7;
+  height: auto;
+  width: 8em;
+  color: darkslategray;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.buttonMore:hover {
+  background-color: #74ae75;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonLess {
+  background-color: #d1412b;
+  height: auto;
+  width: 8em;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.buttonLess:hover {
+  background-color: #f4c8b6;
+  color: darkslategray;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}

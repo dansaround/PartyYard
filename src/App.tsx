@@ -1,10 +1,14 @@
 import "./App.css";
-import { Challenge4 } from "./challenges/4/Challenge4";
+import Header from "./challenges/5/components/Header/Header";
+import Footer from "./challenges/5/components/Footer/Footer";
+import Products from "./challenges/5/components/Products/Products";
 
 function App() {
   return (
     <div className="App">
-      <Challenge4 />
+      <Header />
+      <Products />
+      <Footer />
     </div>
   );
 }

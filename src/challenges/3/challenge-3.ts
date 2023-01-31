@@ -1,6 +1,8 @@
 // 1.  Hacer una función capaz de sumar 2 números =============================
 // Ej: in: 1, 2; out: 3
 
+import { deserialize } from "v8";
+
 // CODE HERE
 export const sumThese = (x: number, y: number) => x + y;
 const result1 = sumThese(10, 5);
@@ -192,6 +194,8 @@ export const piedraPapelTijera = (jugadorPicks: string) => {
 
 const result12 = piedraPapelTijera("piedra");
 console.log("piedra");
-console.log("input player: piedra", "computer pick: ${random}");
+console.log(
+  `Resultado 12: input player: piedra", "computer pick: ${random}, resultado: ${result12}`
+);
 
 //==============================================================================
