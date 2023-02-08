@@ -2,17 +2,6 @@ import { allProducts as data, Food } from "../../Data";
 import styled from "./Products.module.css";
 import { useState } from "react";
 
-//create a function handleAdd that adds the product to the cart and removes it from the list
-//create a function handleRemove that removes the product from the cart and adds it to the list
-
-// const handleRemove = (id) => {
-//   const product = cart.find((product) => product.id === id);
-//   const newProducts = [...allProducts, product];
-//   setAllProducts(newProducts);
-//   const newCart = cart.filter((product) => product.id !== id);
-//   setCart(newCart);
-// };
-
 function Products() {
   const [selectedItems, setSelectedItems] = useState<Food[]>([]);
   const [itemsList, setItemList] = useState<Food[]>(data);
@@ -36,13 +25,7 @@ function Products() {
         <img src={food.image}></img>
         <aside>
           <button className={styled.buttonMore} onClick={() => handleAdd(food)}>
-            +
-          </button>
-          <button
-            className={styled.buttonLess}
-            onClick={() => handleRemove(food)}
-          >
-            -
+            Agregar al carrito
           </button>
         </aside>
       </div>
@@ -57,14 +40,11 @@ function Products() {
         </span>
         <img src={food.image}></img>
         <aside>
-          <button className={styled.buttonMore} onClick={() => handleAdd(food)}>
-            +
-          </button>
           <button
             className={styled.buttonLess}
             onClick={() => handleRemove(food)}
           >
-            -
+            Eliminar del carrito
           </button>
         </aside>
       </div>

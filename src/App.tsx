@@ -1,14 +1,16 @@
 import "./App.css";
-import Header from "./challenges/5/components/Header/Header";
-import Footer from "./challenges/5/components/Footer/Footer";
-import Products from "./challenges/5/components/Products/Products";
+import { GameOfLife } from "./GameOfLife";
+import { TextSide } from "./TextSide";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Products />
-      <Footer />
+      <header className="App-header">
+        <div className="layout">
+          <TextSide />
+          <GameOfLife />
+        </div>
+      </header>
     </div>
   );
 }
