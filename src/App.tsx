@@ -1,4 +1,6 @@
 import "./App.css";
+import { Challenge1 } from "./challenges/1/Challenge1";
+import { Challenge2 } from "./challenges/2/Challenge2";
 import { GameOfLife } from "./GameOfLife";
 import { TextSide } from "./TextSide";
 
